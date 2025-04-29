@@ -103,7 +103,7 @@ if (isset($_POST['b1'])) {
                     </div>
                     <div class="d-inline-flex flex-column text-center px-3 border-right">
                         <h6>Email Us</h6>
-                        <p class="m-0">@petlover.com</p>
+                        <p class="m-0">petlover@gmail.com</p>
                     </div>
                     <div class="d-inline-flex flex-column text-center pl-3">
                         <h6>Call Us</h6>
@@ -169,7 +169,7 @@ $cart_count = $row['count'];
     <!-- Contact Start -->
     <div class="container-fluid pt-5">
         <div class="d-flex flex-column text-center mb-5 pt-5">
-            <h4 class="text-secondary mb-3">Client lOGIN</h4>
+            <h4 class="text-secondary mb-3">CLIENT LOGIN</h4>
             <h1 class="display-4 m-0">JOIN THE PET<span class="text-primary">CARE COMMUNITY</span></h1>
         </div>
         <div class="row justify-content-center">
@@ -190,7 +190,8 @@ $cart_count = $row['count'];
                         
                             <button class="btn btn-primary py-3 px-5" type="submit" id="b1" name="b1">Login</button>
                             <button class="btn btn-primary py-3 px-5" type="submit" id="b1" name="b1">Reset</button>
-                            <button class="btn btn-primary py-3 px-5" type="submit" id="b1" name="b1">Register</button>
+                           <a href="clientreg.php">CLIENT REGISTRATION</a>
+
                         </div>
                     </form>
                 </div>

@@ -215,7 +215,9 @@ mysqli_query($con,$data);
         <div class="row pt-5">
             <div class="col-lg-4 col-md-12 mb-5">
                 <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Pet</span>carehub</h1>
-                <p class="m-0">Ipsum amet sed vero et lorem stet eos ut, labore sed sed stet sea est ipsum ut. Volup amet ea sanct ipsum, dolore vero lorem no duo eirmod. Eirmod amet ipsum no ipsum lorem clita ut. Ut sed sit lorem ea lorem sed, amet stet sit sea ea diam tempor kasd kasd. Diam nonumy etsit tempor ut sed diam sed et ea</p>
+                <p class="m-0">We have experienced and passinate staff who truly love animals.Our personalized care plans ensure that each pet gets the attention they need.We offer a variety of services in low budget from grooming to training ,all in one place.We have a great reviews from satisfied pet owners who trust us with furry friends.
+
+</p>
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="row">
