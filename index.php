@@ -69,7 +69,7 @@ echo'</script>';
                
        
            
-            <a class="text-white px-3" href="logout.php">Logout</a>
+            <!-- <a class="btn btn-lg btn-primary px-3 d-none d-lg-block" href="logout.php">Logout</a> -->
         <?php endif; ?>
 
 
@@ -115,7 +115,7 @@ echo'</script>';
                 <div class="navbar-nav mr-auto py-0">
                     <a href="index.php" class="nav-item nav-link active">Home</a>
                     <a href="about.php" class="nav-item nav-link">About</a>
-                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <!-- <a href="service.php" class="nav-item nav-link">Services</a> -->
                     <a href="petshop.php" class="nav-item nav-link">Pet Buy</a>
                     <a href="petsale.php" class="nav-item nav-link">Pet Sell</a>
                     <a href="shop.php" class="nav-item nav-link">Shop</a>
@@ -134,13 +134,16 @@ echo'</script>';
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
 
+
                 <?php
 $con = mysqli_connect("localhost", "root", "", "petcarehub") or die(mysqli_error());
 $result = mysqli_query($con, "SELECT COUNT(*) as count FROM cart where cemail='$clientemail' and Status='No'");
 $row = mysqli_fetch_assoc($result);
 $cart_count = $row['count'];
 ?>
+
  <?php if(isset($_SESSION['client_Name'])): ?>
+
 
 <a href="cartview.php" class="nav-link text-white position-relative">
     <i class="fa fa-shopping-cart fa-lg"></i>
@@ -148,8 +151,11 @@ $cart_count = $row['count'];
         <?php echo $cart_count; ?>
     </span>
 </a>
+
 <?php endif; ?>
-                <a href="booking.php" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Booking</a>
+
+                <a href="booking.php" class="btn btn-lg btn-primary px-3 d-none d-lg-block ml-5">Booking</a>
+                <a class="btn btn-lg btn-primary px-3 d-none d-lg-block ml-2" href="logout.php">Logout</a>
             </div>
         </nav>
     </div>

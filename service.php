@@ -113,7 +113,7 @@ echo'</script>';
                 <div class="navbar-nav mr-auto py-0">
                     <a href="index.php" class="nav-item nav-link active">Home</a>
                     <a href="about.php" class="nav-item nav-link">About</a>
-                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <!-- <a href="service.php" class="nav-item nav-link">Services</a> -->
                     <a href="petshop.php" class="nav-item nav-link">Pet Buy</a>
                     <a href="petsale.php" class="nav-item nav-link">Pet Sell</a>
                     <a href="shop.php" class="nav-item nav-link">Shop</a>
