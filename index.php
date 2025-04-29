@@ -133,6 +133,7 @@ echo'</script>';
                    
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
+
                 <?php
 $con = mysqli_connect("localhost", "root", "", "petcarehub") or die(mysqli_error());
 $result = mysqli_query($con, "SELECT COUNT(*) as count FROM cart where cemail='$clientemail' and Status='No'");
@@ -140,12 +141,14 @@ $row = mysqli_fetch_assoc($result);
 $cart_count = $row['count'];
 ?>
  <?php if(isset($_SESSION['client_Name'])): ?>
+
 <a href="cartview.php" class="nav-link text-white position-relative">
     <i class="fa fa-shopping-cart fa-lg"></i>
     <span class="badge badge-danger position-absolute" style="top: -5px; right: -10px;">
         <?php echo $cart_count; ?>
     </span>
-</a><?php endif; ?>
+</a>
+<?php endif; ?>
                 <a href="booking.php" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Booking</a>
             </div>
         </nav>
@@ -164,8 +167,7 @@ $cart_count = $row['count'];
                             <h3 class="text-white mb-3 d-none d-sm-block">Best Pet Services</h3>
                             <h1 class="display-3 text-white mb-3">Tails of Happiness</h1>
                             <h5 class="text-white mb-3 d-none d-sm-block">Caring for a pet is a beautiful journey of love,wher every wag of the tail and purr of contentment fills our heart with joy and laughter.</h5>
-                            <a href="booking.php" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</a>
-                            <a href="petshop.php" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Shop Now</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -176,9 +178,7 @@ $cart_count = $row['count'];
                             <h3 class="text-white mb-3 d-none d-sm-block">Best Pet Services</h3>
                             <h1 class="display-3 text-white mb-3">Pet Spa & Grooming</h1>
                             <h5 class="text-white mb-3 d-none d-sm-block">Life is better with a furry friend which makes the perfect combination.</h5>
-                            <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</a>
-                            <a href="" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</a>
-                        </div>
+                           </div>
                     </div>
                 </div>
             </div>

@@ -174,14 +174,12 @@ $cart_count = $row['count'];
     </div>
     <!-- Navbar End -->
 
-
     <!-- Contact Start -->
     <div class="container-fluid pt-5">
         <div class="d-flex flex-column text-center mb-5 pt-5">
             <h4 class="text-secondary mb-3">Client lOGIN</h4>
             <h1 class="display-4 m-0">JOIN THE PET<span class="text-primary">CARE COMMUNITY</span></h1>
         </div>
-		
         <div class="row justify-content-center">
             <div class="col-12 col-sm-8 mb-5">
                 <div class="contact-form">
@@ -199,6 +197,7 @@ $cart_count = $row['count'];
                         
                             <button class="btn btn-primary py-3 px-5" type="submit" id="b1" name="b1">Login</button>
                             <button class="btn btn-primary py-3 px-5" type="submit" id="b1" name="b1">Reset</button>
+                            <button class="btn btn-primary py-3 px-5" type="submit" id="b1" name="b1">Register</button>
                         </div>
                     </form>
                 </div>
@@ -260,6 +259,7 @@ $cart_count = $row['count'];
             </div>
         </div>
     </div>
+
     <div class="container-fluid text-white py-4 px-sm-3 px-md-5" style="background: #111111;">
         <div class="row">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
