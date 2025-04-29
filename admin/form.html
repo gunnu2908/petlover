@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Form</title>
+<?php
+if(isset($_POST['t1'];
+$data="select * from db table where date is='$a'";
+$result=mysqli_query($con,$data);
+while($row=$date->fetch_asoc())
+{
+$b=$row[Current date];
+$c=$row[Service code];
+$d=$row[Service date];
+$e=$row[Service Description];
+}
+}
+
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>PET CARE HUB</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+    <div class="navbar navbar-inverse set-radius-zero" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+
+                 <h2><font color="green"> Pet Care Hub</font></h2>
+               
+            </div>
+
+            <div class="right-div">
+                <a href="#" class="btn btn-info pull-right">LOG ME OUT</a>
+            </div>
+        </div>
+    </div>
+    <!-- LOGO HEADER END-->
+    <section class="menu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-right">
+                            <li><a href="index.html" >DASHBOARD</a></li>
+                             
+                            <li><a href="form.html" class="menu-top-active">FORMS</a></li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown">UI ELEMENTS <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="ui.html">UI ELEMENTS</a></li>
+                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">EXAMPLE LINK</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="tab.html">TABS & PANELS</a></li>
+                            <li><a href="table.html">TABLES</a></li>
+                            <li><a href="blank.html" >BLANK PAGE</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+     <!-- MENU SECTION END-->
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">Admin Services</h4>
+                
+                            </div>
+     <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="panel panel-heading">
+      <div class="panel heading">
+       <H4> <B>OUR SERVICES</B>  </H4><BR>
+                            <form role="form">
+                                        <div class="form-group">
+                                            <label>Current Date</label>
+                                            <input class="form-control" type="date" required />
+                                          
+                                        </div>
+                                 <div class="form-group">
+                                            <label>Service Code</label>
+                                            <input class="form-control" type="text" required />
+                                  
+                                        </div>
+					 <div class="form-group">
+                                            <label>Service Name</label>
+                                            <input class="form-control" type="text" required />
+                                  
+                                        </div>
+                                            <div class="form-group">
+                                            <label>Service Description</label>
+                                            <textarea class="form-control" rows="3" required></textarea>
+                                        </div>
+					 <div class="form-group">
+                                            <label>Service Photo1</label>
+                                            <input class="form-control" type="file" required />
+                                  
+                                        </div>
+                                         <div class="form-group">
+                                            <label>Service Code</label>
+                                            <input class="form-control" type="file" required />
+                                  
+                                        </div>
+                                 
+                                        <button type="submit" class="btn btn-info">Send Message </button>
+
+                                    </form>
+                            </div>
+                        </div>
+                            </div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+               <div class="panel panel-danger">
+                        <div class="panel-heading">
+                           SINGUP FORM
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                        
+                                 <div class="form-group">
+                                            <label>Enter Email</label>
+                                            <input class="form-control" type="text" />
+                                     <p class="help-block">Help text here.</p>
+                                        </div>
+                                            <div class="form-group">
+                                            <label>Enter Password</label>
+                                            <input class="form-control" type="password" />
+                                     <p class="help-block">Help text here.</p>
+                                        </div>
+                                <div class="form-group">
+                                            <label>Re Type Password </label>
+                                            <input class="form-control"  type="password" />
+                                     <p class="help-block">Help text here.</p>
+                                        </div>
+                                 
+                                        <button type="submit" class="btn btn-danger">Register Now </button>
+
+                                    </form>
+                            </div>
+                        </div>
+                            </div>
+        </div>
+                <!-- CONTENT-WRAPPER SECTION END-->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                   &copy; Petcarehub |<a href="http://www.Petcarehub.com/" target="_blank"  > Designed by : GUNNPREET KAUR</a> 
+                </div>
+
+            </div>
+        </div>
+    </section>
+      <!-- FOOTER SECTION END-->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+      <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
