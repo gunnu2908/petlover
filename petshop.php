@@ -253,6 +253,8 @@ $result = mysqli_query($con, $sql);
 </div>
 
                 <?php } ?>
+
+
                 <?php
 session_start(); 
 
@@ -282,7 +284,8 @@ if(isset($_POST['bookbtn'])) {
 
     $query = "INSERT INTO cart  VALUES ('$cemail', '$cda', '$cti', '$regdno', 'NO')";
     if(mysqli_query($con, $query)) {
-        echo "<script>alert('Pet booked successfully!');</script>";
+        echo "<script>alert('Pet booked successfully!');
+        window.location.href = window.location.href;</script>";
     } else {
         echo "<script>alert('Error booking pet: " . mysqli_error($con) . "');</script>";
     }

@@ -80,13 +80,17 @@ if(isset($_POST['b1']))
    $q=$_POST['t17'];
    $r=$_POST['t18'];
    $pr=$_POST['t19'];
+
  $data="insert into petsale values('$a','$b','$c','$d','$e','$f','$g','$h','$i','$j','$k','$l','$m','$n','$o','$p','$q','$r','No','$pr')";
+ 
  mysqli_query($con,$data);
  $data="delete from petno";
 mysqli_query($con,$data);
 $a=$a+1;
 $data="insert into petno values('$a')";
+
 mysqli_query($con,$data);
+
 while($row=$result->fetch_assoc())
 {
 $a=$row['pid'];
