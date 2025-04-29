@@ -31,45 +31,37 @@
     <link href="css/style.css" rel="stylesheet">
 <?php
 session_start();
+$con = mysqli_connect("localhost", "root", "", "petcarehub") or die(mysqli_error($con));
 
-$con=mysqli_connect("localhost","root","","petcarehub")or die(mysqli_error());
-if(isset($_POST['bb1']))
-{
-$name=$_POST['tt1'];
-$email=$_POST['tt2'];
-$data="Insert into query values('$name','$email')";
-mysqli_query($con,$data);
-$name="";
-$email="";
-}
-if (isset($_POST['b1']))
-{
-	$a=$_POST['t1'];
-    $b=$_POST['t2'];
-$data="select * from clientreg where email ='$a'";
-$result=mysqli_query($con,$data);
-while($row=$result->fetch_assoc())
-{
-$pass=$row["password"];
-$cname=$row["fullname"];
+if (isset($_POST['b1'])) {
+    $email = $_POST['t1'];
+    $password = $_POST['t2'];
 
-if($b==$pass)
-{
-    $_SESSION['client_Email']=$a;
-    $_SESSION['client_Name']=$cname;
-    echo'<script type="text/javascript">';
-    echo'alert("Login Succed")';
-    echo'</script>';
-    echo "<script>location.href='index.php';</script>";
-}
-else{
-    echo'<script type="text/javascript">';
-echo'alert("Password  not Match With Old Password")';
-echo'</script>';
-}
-}
+    $stmt = $con->prepare("SELECT fullname, password FROM clientreg WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows === 1) {
+        $stmt->bind_result($fullname, $stored_password);
+        $stmt->fetch();
+
+        // You should use password_hash() & password_verify() in real production
+        if ($password === $stored_password) {
+            $_SESSION['client_Email'] = $email;
+            $_SESSION['client_Name'] = $fullname;
+            echo '<script>alert("Login Succeeded"); location.href="index.php";</script>';
+        } else {
+            echo '<script>alert("Incorrect Password");</script>';
+        }
+    } else {
+        echo '<script>alert("No account found with that email");</script>';
+    }
+
+    $stmt->close();
 }
 ?>
+
 </head>
 
 <body>
@@ -184,6 +176,7 @@ $cart_count = $row['count'];
             <div class="col-12 col-sm-8 mb-5">
                 <div class="contact-form">
                     <div id="success"></div>
+
                     <form novalidate="novalidate" method="POST">
                         <div class="control-group">
                             
