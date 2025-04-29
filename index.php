@@ -56,10 +56,9 @@ echo'</script>';
             <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
             <?php if(isset($_SESSION['client_Name'])): ?>
                 <div class="d-inline-flex align-items-center">
-
-                    <a class="text-white pr-3" href=""></a>
-                    <span class="text-white">Welcome: <?php echo htmlspecialchars($_SESSION['client_Name']); ?></span>
-                    <a class="text-white px-3" href=""></a>
+                    <a class="font-bold pr-3" href=""></a>
+                    <span class="font-bold">Welcome: <?php echo htmlspecialchars($_SESSION['client_Name']); ?></span>
+                    <!-- <a class="text-white px-3" href=""></a> -->
                    
                 </div>
             </div>
@@ -155,7 +154,9 @@ $cart_count = $row['count'];
 <?php endif; ?>
 
                 <a href="booking.php" class="btn btn-lg btn-primary px-3 d-none d-lg-block ml-5">Booking</a>
+                <?php if(isset($_SESSION['client_Name'])): ?>
                 <a class="btn btn-lg btn-primary px-3 d-none d-lg-block ml-2" href="logout.php">Logout</a>
+                <?php endif; ?>
             </div>
         </nav>
     </div>
@@ -430,7 +431,8 @@ $cart_count = $row['count'];
                                 <input type="email" class="form-control border-0" placeholder="Your Email" required name="tt2" />
                             </div>
                             <div>
-                                <button class="btn btn-lg btn-primary btn-block border-0" type="submit" name="bb1">Submit Now</button>
+                                <a class="btn btn-lg btn-primary btn-block border-0"  href="mailto:arman@gamil.com">Email us</a>
+                                <!-- <button class="btn btn-lg btn-primary btn-block border-0" type="submit" name="bb1">Submit Now</button> -->
                             </div>
                         </form>
                     </div>
