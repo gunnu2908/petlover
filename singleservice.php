@@ -179,21 +179,66 @@ $cart_count = $row['count'];
             $g = $row['Sdescr'];
             $h = $row['Rate'];
         ?>
-            <div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10 col-12">
-            <div class="d-flex flex-column text-left mb-4">
-                <h4 class="text-secondary mb-3"><?php echo htmlspecialchars($c); ?></h4>
-                <h1 class="mb-3"><?php echo htmlspecialchars($g); ?></h1>
+    <div class="container-fluid">
+    <div class="container mb-5">
+    <h3 class="text-center text-primary mb-4">Related Sub Services</h3>
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img class="card-img-top" src="img/<?php echo htmlspecialchars($e); ?>" alt="Sub Service 1">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo htmlspecialchars($c); ?> - Basic</h5>
+                    <p class="card-text"><?php echo htmlspecialchars(substr($d, 0, 60)); ?>...</p>
+                    <p class="text-primary font-weight-bold">₹<?php echo htmlspecialchars($h); ?></p>
+                    <form method="post" action="addtocart.php">
+                        <input type="hidden" name="service_code" value="<?php echo htmlspecialchars($a); ?>">
+                        <input type="hidden" name="service_name" value="<?php echo htmlspecialchars($c); ?>">
+                        <input type="hidden" name="service_price" value="<?php echo htmlspecialchars($h); ?>">
+                        <button type="submit" class="btn btn-primary btn-block">Add to Cart</button>
+                    </form>
+                </div>
             </div>
+        </div>
 
-            <div class="mb-5">
-                <img class="img-fluid w-100 mb-4" src="img/<?php echo htmlspecialchars($e); ?>" alt="Service Image">
-                <p><?php echo nl2br(htmlspecialchars($d)); ?></p>
-                <p><strong>Rate:</strong> $<?php echo htmlspecialchars($h); ?></p>
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img class="card-img-top" src="img/<?php echo htmlspecialchars($f); ?>" alt="Sub Service 2">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo htmlspecialchars($c); ?> - Premium</h5>
+                    <p class="card-text"><?php echo htmlspecialchars(substr($d, 0, 60)); ?>...</p>
+                    <p class="text-primary font-weight-bold">₹<?php echo htmlspecialchars($h + 100); ?></p>
+                    <form method="post" action="addtocart.php">
+                        <input type="hidden" name="service_code" value="<?php echo htmlspecialchars($a); ?>">
+                        <input type="hidden" name="service_name" value="<?php echo htmlspecialchars($c); ?> - Premium">
+                        <input type="hidden" name="service_price" value="<?php echo htmlspecialchars($h + 100); ?>">
+                        <button type="submit" class="btn btn-primary btn-block">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img class="card-img-top" src="img/<?php echo htmlspecialchars($e); ?>" alt="Sub Service 3">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo htmlspecialchars($c); ?> - Deluxe</h5>
+                    <p class="card-text"><?php echo htmlspecialchars(substr($d, 0, 60)); ?>...</p>
+                    <p class="text-primary font-weight-bold">₹<?php echo htmlspecialchars($h + 200); ?></p>
+                    <form method="post" action="addtocart.php">
+                        <input type="hidden" name="service_code" value="<?php echo htmlspecialchars($a); ?>">
+                        <input type="hidden" name="service_name" value="<?php echo htmlspecialchars($c); ?> - Deluxe">
+                        <input type="hidden" name="service_price" value="<?php echo htmlspecialchars($h + 200); ?>">
+                        <button type="submit" class="btn btn-primary btn-block">Add to Cart</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
 </div>
 
         <?php } // End of while loop ?>
